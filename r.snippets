@@ -89,7 +89,7 @@ snippet swd
 	#---- set working dir to source file location from within RStudio ----
 	  set2source <- function()
 	    {
-	    try(mypath <- dirname(rstudioapi::getActiveDocumentContext()$path),silent=TRUE)
+	    try(mypath <- dirname(rstudioapi::getActiveDocumentContext()\$path),silent=TRUE)
 	    try(setwd(mypath),silent=TRUE) 
 	    }
 	    set2source()
@@ -103,7 +103,7 @@ snippet prae
 	#---- set working dir to source file location from within RStudio ----
 	  set2source <- function()
 	    {
-	    try(mypath <- dirname(rstudioapi::getActiveDocumentContext()$path),silent=TRUE)
+	    try(mypath <- dirname(rstudioapi::getActiveDocumentContext()\$path),silent=TRUE)
 	    try(setwd(mypath),silent=TRUE) 
 	    }
 	    set2source()
