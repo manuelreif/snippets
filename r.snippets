@@ -95,6 +95,29 @@ snippet swd
 	    set2source()
 	# ---------------------------------------------------------------------  
 
+snippet prae
+	#!/usr/bin/Rscript
 
+	start <- Sys.time()
+	
+	#---- set working dir to source file location from within RStudio ----
+	  set2source <- function()
+	    {
+	    try(mypath <- dirname(rstudioapi::getActiveDocumentContext()$path),silent=TRUE)
+	    try(setwd(mypath),silent=TRUE) 
+	    }
+	    set2source()
+	#----------------------------------
+	# load packages: 
+	
+	
+	#----------------------------------
+	
+	
+	
+	
+	#----------------------------------
+	end <- Sys.time()
+	end - start
 
 
